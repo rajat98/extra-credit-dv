@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <title>Homework #6: Extra Credit - CSE 578 - Spring 2023</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="rpawar9.css"/>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="rpawar9.js"></script>
+
+    <style>
+    </style>
+</head>
+<body>
+<div class="myContainer">
+    <h1 class="text-center">Homework #6: Hierarchy and Comparisons</h1>
+    <h3 class="text-center">Rajat Pawar - rpawar9@asu.edu</h3>
+    <hr>
+    <div class="control-panel">
+
+        <label for="x-attribute-select">X Attribute:</label>
+        <select id="x-attribute-select" style="width: 12%;" onchange="updateXAttribute()">
+            <!-- Options will be populated dynamically -->
+        </select>
+
+        <label for="y-attribute-select">Y Attribute:</label>
+        <select id="y-attribute-select" style="width: 12%;" onchange="updateYAttribute()">
+            <!-- Options will be populated dynamically -->
+        </select>
+        <label for="size-select">Size:</label>
+        <select id="size-select" style="width: 12%;" onchange="updateSizeAttribute()">
+            <!-- Options will be populated dynamically -->
+        </select>
+        <label for="color-select">Color:</label>
+        <select id="color-select" style="width: 12%;" onchange="updateColorAttribute()">
+            <!-- Options will be populated dynamically -->
+        </select>
+
+
+    </div>
+
+    <div id="scatter_plot_div" class="border border-dark rounded bg-light shadow-sm">
+        <h3 class="text-center">Scatter Plot</h3>
+        <svg id="scatter_plot_svg"></svg>
+    </div>
+    <div id="icicleplot_div" class="border border-dark rounded bg-light shadow-sm">
+        <h3 class="text-center" id="icicle_header">Moves hierarchy</h3>
+        <button class="fancy-button" id="add_to_radar_button">Click Me</button>
+        <svg id="icicleplot_svg"></svg>
+    </div>
+    <div id="radarplot_div" class="border border-dark rounded bg-light shadow-sm">
+        <h3 class="text-center" id="radar_header">Pokemon Stats Radar</h3>
+        <div id="legend"></div>
+
+        <svg id="radarplot_svg"></svg>
+    </div>
+</div>
+</body>
+</html>
